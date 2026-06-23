@@ -1,29 +1,280 @@
-﻿<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Niswander Tech — Power Job Search and SalesVibe.AI. Choose your Adventure. Free trials, no credit card." />
+  <meta name="theme-color" content="#050a18" />
+  <title>Niswander Tech — Power Job Search &amp; SalesVibe.AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #050a18;
+      --card: rgba(15, 23, 42, 0.92);
+      --border: rgba(59, 130, 246, 0.22);
+      --cyan: #38bdf8;
+      --sky: #7dd3fc;
+      --jobs: #34d399;
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background:
+        radial-gradient(ellipse 90% 55% at 50% 38%, rgba(77, 168, 255, 0.12) 0%, transparent 55%),
+        radial-gradient(ellipse 70% 45% at 50% 0%, #122044 0%, var(--bg) 50%, #020617 100%);
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 1.5rem;
+      max-width: 72rem;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .logo {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: -0.02em;
+      text-decoration: none;
+      color: inherit;
+    }
+    .logo span { color: var(--cyan); }
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="router-base" content="" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <title>Alex Niswander — AI Consulting & Development</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-    <meta name="description" content="Alex Niswander — AI Engineer & Consultant. LLM integration, RAG pipelines, and full-stack AI solutions for modern businesses." />
-    <meta property="og:title" content="Alex Niswander — AI Consulting & Development" />
-    <meta property="og:description" content="Building intelligent systems that drive real business value. LLM integration, RAG pipelines, AI automation." />
-    <script defer src="assets/index-BtvT09nA.js"></script>
-    <link rel="stylesheet" href="assets/index-ZS8xJBdW.css" />
-  </head>
+    .main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      max-width: 72rem;
+      margin: 0 auto;
+      padding: 1rem 0 2rem;
+    }
+    .hero {
+      text-align: center;
+      padding: 1.5rem 1.5rem 2.75rem;
+      max-width: 44rem;
+      margin: 0 auto;
+    }
+    .eyebrow {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--cyan);
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2rem, 5vw, 2.85rem);
+      font-weight: 700;
+      line-height: 1.12;
+      letter-spacing: -0.03em;
+      text-shadow: 0 0 24px rgba(77, 168, 255, 0.35);
+    }
 
-  <body>
-    <div id="root"></div>
-    <script
-      defer
-      src="https://manus-analytics.com/umami"
-      data-website-id="baff7d20-4e7a-4d5d-8667-2ab5f85b1f72"></script>
-  </body>
+    .paths-wrap {
+      position: relative;
+      padding: 0 1.5rem;
+    }
+    .paths-glow {
+      position: absolute;
+      inset: -2rem 1.5rem;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .paths-glow .glow-jobs {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 48%;
+      height: 110%;
+      background: radial-gradient(ellipse at center, rgba(52, 211, 153, 0.2) 0%, transparent 68%);
+    }
+    .paths-glow .glow-sales {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 48%;
+      height: 110%;
+      background: radial-gradient(ellipse at center, rgba(77, 168, 255, 0.18) 0%, transparent 68%);
+    }
+    .paths {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      max-width: 56rem;
+      margin: 0 auto;
+    }
+    @media (min-width: 768px) {
+      .paths { grid-template-columns: 1fr 1fr; }
+    }
 
+    .path-card {
+      display: flex;
+      flex-direction: column;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 1.1rem;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+    }
+    .path-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.35);
+    }
+    .path-card.jobs {
+      border-color: rgba(52, 211, 153, 0.18);
+    }
+    .path-card.sales {
+      border-color: rgba(125, 211, 252, 0.22);
+    }
+    .path-card.jobs:hover {
+      border-color: rgba(52, 211, 153, 0.5);
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.35), 0 0 40px rgba(52, 211, 153, 0.12);
+    }
+    .path-card.sales:hover {
+      border-color: rgba(125, 211, 252, 0.55);
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.35), 0 0 40px rgba(125, 211, 252, 0.12);
+    }
+    .body {
+      padding: 1.75rem 1.5rem 1.85rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .path-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 0.35rem;
+    }
+    .path-card.jobs .path-label { color: var(--jobs); }
+    .path-card.sales .path-label { color: var(--sky); }
+    .body h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.02em;
+    }
+    .body .desc {
+      color: var(--muted);
+      font-size: 0.875rem;
+      flex: 1;
+      margin-bottom: 1rem;
+      line-height: 1.55;
+    }
+    .trial {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: #e2e8f0;
+      margin-bottom: 1rem;
+    }
+    .trial .dot {
+      width: 0.4rem;
+      height: 0.4rem;
+      border-radius: 50%;
+      background: #22c55e;
+      box-shadow: 0 0 8px rgba(34, 197, 94, 0.7);
+    }
+    .cta {
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 0.75rem 1.25rem;
+      border-radius: 0.5rem;
+      font-weight: 700;
+      font-size: 0.875rem;
+      transition: filter 0.2s;
+    }
+    .path-card.jobs .cta {
+      background: linear-gradient(90deg, #ecfdf5, #6ee7b7);
+      color: #064e3b;
+    }
+    .path-card.sales .cta {
+      background: linear-gradient(90deg, #f0f9ff, #7dd3fc);
+      color: #0c4a6e;
+      box-shadow: 0 0 20px rgba(125, 211, 252, 0.35);
+    }
+    .path-card:hover .cta { filter: brightness(1.06); }
+
+    footer {
+      margin-top: auto;
+      text-align: center;
+      padding: 2rem 1.5rem;
+      color: #64748b;
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <nav class="nav">
+      <a class="logo" href="index.html">niswander<span>.tech</span></a>
+    </nav>
+
+    <div class="main">
+      <header class="hero">
+        <p class="eyebrow">Choose your Adventure.</p>
+        <h1>Find your next role.<br />Grow your pipeline.</h1>
+      </header>
+
+      <div class="paths-wrap">
+        <div class="paths-glow" aria-hidden="true">
+          <div class="glow-jobs"></div>
+          <div class="glow-sales"></div>
+        </div>
+        <div class="paths">
+          <a class="path-card jobs" href="jobs/index.html">
+            <div class="body">
+              <div class="path-label">Find a new job</div>
+              <h2>Power Job Search</h2>
+              <p class="desc">Search across boards, save listings, track status, and manage your entire hunt in one powerful workspace — built for serious job seekers.</p>
+              <div class="trial"><span class="dot"></span> Try free for 7 days · No credit card</div>
+              <span class="cta">Explore Power Job Search →</span>
+            </div>
+          </a>
+
+          <a class="path-card sales" href="salesvibe/index.html">
+            <div class="body">
+              <div class="path-label">Grow your pipeline</div>
+              <h2>SalesVibe<span style="color:#94a3b8;font-weight:600">.AI</span></h2>
+              <p class="desc">AI sales intelligence — strategy chat, company insights, pitch decks, and email sequences. Your digital sales OS.</p>
+              <div class="trial"><span class="dot"></span> Free 10-day trial · No credit card</div>
+              <span class="cta">Explore SalesVibe.AI →</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <footer>© Niswander Tech · 2026</footer>
+  </div>
+</body>
 </html>

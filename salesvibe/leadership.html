@@ -1,0 +1,249 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SalesVibe.AI leadership team — experienced operators building on-premise sales intelligence for enterprise teams.">
+    <meta name="theme-color" content="#1e293b">
+    <link rel="icon" type="image/png" href="SV3.ai.png">
+    <title>Leadership Team | SalesVibe.AI</title>
+    <script src="../site-config.js"></script>
+    <link rel="stylesheet" href="css/leadership-marketing.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Space Grotesk', system-ui, sans-serif;
+            background-color: #050a18;
+            color: #fff;
+            line-height: 1.6;
+        }
+        .hero-gradient {
+            background:
+                radial-gradient(ellipse 90% 55% at 50% 42%, rgba(77, 168, 255, 0.14) 0%, transparent 55%),
+                radial-gradient(ellipse 70% 45% at 50% 0%, #122044 0%, #050a18 50%, #020617 100%);
+        }
+        .logo-mark {
+            width: 2.35rem;
+            height: 2.35rem;
+            border-radius: 0.45rem;
+            object-fit: contain;
+            flex-shrink: 0;
+            display: block;
+        }
+        .brand-wordmark {
+            font-size: 1.25rem;
+            font-weight: 700;
+            line-height: 1;
+            letter-spacing: -0.02em;
+        }
+        .brand-wordmark .brand-vibe {
+            color: #38bdf8;
+        }
+        .brand-wordmark .brand-ai {
+            color: #94a3b8;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+        .text-gradient-rain {
+            background: linear-gradient(90deg, #7dd3fc, #4da8ff, #38bdf8);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .btn-outline-rain {
+            border: 1px solid rgba(226, 232, 240, 0.55);
+            background: rgba(15, 23, 42, 0.25);
+            color: #f1f5f9;
+            padding: 0.55rem 1.35rem;
+            border-radius: 0.45rem;
+            font-weight: 600;
+            font-size: 0.875rem;
+            cursor: pointer;
+            transition: border-color 0.2s, background 0.2s, color 0.2s;
+        }
+        .btn-outline-rain:hover {
+            border-color: rgba(125, 211, 252, 0.7);
+            background: rgba(30, 58, 138, 0.2);
+            color: #fff;
+        }
+        .btn-primary-rain {
+            background: linear-gradient(180deg, #f0f9ff 0%, #bae6fd 42%, #7dd3fc 100%);
+            color: #0c4a6e;
+            padding: 0.55rem 1.35rem;
+            border-radius: 0.45rem;
+            font-weight: 700;
+            font-size: 0.875rem;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 0 20px rgba(125, 211, 252, 0.85), 0 0 45px rgba(59, 130, 246, 0.45);
+            transition: filter 0.2s;
+        }
+        .btn-primary-rain:hover { filter: brightness(1.06); }
+        .nav-rain-link {
+            color: #e2e8f0 !important;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+        }
+        .nav-rain-link:hover,
+        .nav-rain-link--active {
+            color: #7dd3fc !important;
+        }
+        .page-intro {
+            padding-top: 7rem;
+            padding-bottom: 2rem;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: all 0.6s ease;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-white">
+    <nav class="bg-[#050a18]/85 backdrop-blur-lg border-b border-white/[0.06] fixed w-full z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 relative">
+                <a href="index.html" class="flex items-center gap-3 hover:opacity-90 transition-opacity">
+                    <img src="SV3.ai.png" alt="" class="logo-mark" width="38" height="38" aria-hidden="true">
+                    <span class="brand-wordmark text-white">Sales<span class="brand-vibe">Vibe</span><span class="brand-ai">.AI</span></span>
+                </a>
+                <div class="hidden md:flex items-center gap-2 absolute left-1/2 -translate-x-1/2">
+                    <a href="index.html" class="nav-rain-link px-4 py-2 text-sm transition-colors">Why SalesVibe</a>
+                    <a href="leadership.html" class="nav-rain-link nav-rain-link--active px-4 py-2 text-sm transition-colors" aria-current="page">Our Leadership</a>
+                    <a href="index.html#pricing" class="nav-rain-link px-4 py-2 text-sm transition-colors">Solution Pricing</a>
+                    <a href="index.html#sales-community" class="nav-rain-link px-4 py-2 text-sm transition-colors">Sales Community</a>
+                </div>
+                <div class="hidden md:flex items-center gap-3 ml-auto">
+                    <a href="../index.html" class="nav-rain-link px-3 py-2 text-sm transition-colors">All products</a>
+                    <button type="button" onclick="signIn()" class="btn-outline-rain">Sign in</button>
+                    <button type="button" onclick="signUp()" class="btn-primary-rain">Free sign up</button>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-slate-300 hover:text-blue-400" type="button" aria-label="Menu">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden bg-slate-800 border-t border-slate-700">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-slate-300 hover:text-blue-400">Why SalesVibe</a>
+                <a href="leadership.html" class="block px-3 py-2 text-blue-400" aria-current="page">Our Leadership</a>
+                <a href="index.html#pricing" class="block px-3 py-2 text-slate-300 hover:text-blue-400">Solution Pricing</a>
+                <a href="index.html#sales-community" class="block px-3 py-2 text-slate-300 hover:text-blue-400">Sales Community</a>
+                <a href="../index.html" class="block px-3 py-2 text-slate-300 hover:text-blue-400">All products</a>
+                <button type="button" onclick="signIn()" class="w-full mt-3 btn-outline-rain">Sign in</button>
+                <button type="button" onclick="signUp()" class="w-full mt-2 btn-primary-rain">Free sign up</button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-gradient page-intro">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">
+                Our <span class="text-gradient-rain">Leadership</span>
+            </h1>
+            <p class="text-lg text-slate-300 leading-relaxed">
+                Experienced operators and builders behind SalesVibe.AI — scaling enterprise revenue with trustworthy, on-premise intelligence.
+            </p>
+        </div>
+    </section>
+
+    <section id="leadership" class="py-16 pb-24 bg-slate-900 leadership-wrap">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="leadership-grid">
+                <article class="leader-card fade-in">
+                    <img class="leader-photo" src="Leadership Team/Marcus Vance.png" alt="Marcus Vance, CEO" loading="lazy" />
+                    <div class="leader-body">
+                        <p class="leader-role">Chief Executive Officer</p>
+                        <h2 class="leader-name">Marcus Vance <a href="https://www.linkedin.com/in/marcus-vance" class="leader-linkedin" target="_blank" rel="noopener noreferrer">LinkedIn</a></h2>
+                        <blockquote class="leader-quote">&ldquo;The future of B2B revenue isn't about automating spam; it's about scaling human intelligence and timing.&rdquo;</blockquote>
+                        <p class="leader-bio">20 years scaling B2B enterprise software. Former VP of Sales at Salesforce.</p>
+                    </div>
+                </article>
+                <article class="leader-card fade-in">
+                    <img class="leader-photo" src="Leadership Team/Dr. Aris Thorne.png" alt="Dr. Aris Thorne, CTO" loading="lazy" />
+                    <div class="leader-body">
+                        <p class="leader-role">Chief Technology Officer</p>
+                        <h2 class="leader-name">Dr. Aris Thorne <a href="https://www.linkedin.com/in/aris-thorne-AI" class="leader-linkedin" target="_blank" rel="noopener noreferrer">LinkedIn</a></h2>
+                        <blockquote class="leader-quote">&ldquo;We are building predictive, agentic workflows that understand context, intent, and market regimes.&rdquo;</blockquote>
+                        <p class="leader-bio">AI engineer specializing in RAG frameworks and enterprise model pipelines.</p>
+                    </div>
+                </article>
+                <article class="leader-card fade-in">
+                    <img class="leader-photo" src="Leadership Team/Sarah Jenkins 2.png" alt="Sarah Jenkins, CRO" loading="lazy" />
+                    <div class="leader-body">
+                        <p class="leader-role">Chief Revenue Officer</p>
+                        <h2 class="leader-name">Sarah Jenkins</h2>
+                        <blockquote class="leader-quote">&ldquo;AI should remove administrative friction so reps can build actual relationships.&rdquo;</blockquote>
+                        <p class="leader-bio">Expert in MEDDPICC and scaling SaaS from $5M to $100M+ ARR.</p>
+                    </div>
+                </article>
+                <article class="leader-card fade-in">
+                    <img class="leader-photo" src="Leadership Team/David Cho.png" alt="David Cho, VP Product" loading="lazy" />
+                    <div class="leader-body">
+                        <p class="leader-role">VP of Product</p>
+                        <h2 class="leader-name">David Cho</h2>
+                        <blockquote class="leader-quote">&ldquo;Great AI product design builds trust — reps must understand why the AI suggests an action.&rdquo;</blockquote>
+                        <p class="leader-bio">Product leader focused on enterprise adoption and frictionless CRM integrations.</p>
+                    </div>
+                </article>
+                <article class="leader-card fade-in">
+                    <img class="leader-photo" src="Leadership Team/Elena Rostova.png" alt="Elena Rostova, VP Data Science" loading="lazy" />
+                    <div class="leader-body">
+                        <p class="leader-role">VP of Data Science &amp; ML</p>
+                        <h2 class="leader-name">Elena Rostova</h2>
+                        <blockquote class="leader-quote">&ldquo;Our models process unstructured real-time data to signal when a B2B lead is ready to buy.&rdquo;</blockquote>
+                        <p class="leader-bio">NLP and quantitative analysis applied to B2B forecasting.</p>
+                    </div>
+                </article>
+                <article class="leader-card fade-in">
+                    <img class="leader-photo" src="Leadership Team/Julian Vacilles.png" alt="Julian Vacilles" loading="lazy" />
+                    <div class="leader-body">
+                        <p class="leader-role">Head of AI Safety &amp; Compliance</p>
+                        <h2 class="leader-name">Julian Vacilles, Esq.</h2>
+                        <blockquote class="leader-quote">&ldquo;Enterprise adoption requires airtight privacy, SOC2, and zero hallucination in client-facing comms.&rdquo;</blockquote>
+                        <p class="leader-bio">Data governance and AI ethics for global enterprise boundaries.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-white py-16 border-t border-slate-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto">
+                <img src="SV.AI.png" alt="SalesVibe.AI" class="mx-auto mb-4 h-12 w-auto max-w-full object-contain">
+                <p class="text-slate-400 leading-relaxed">Sales intelligence — strategy, decks, and campaigns powered by SalesVibe.AI.</p>
+            </div>
+            <div class="border-t border-slate-700 mt-12 pt-8 text-center text-slate-400">
+                <p>&copy; 2026 SalesVibe.AI · <a href="../index.html" class="hover:text-blue-400" style="color:inherit">Niswander Tech</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const SALESVIBE_APP_URL = window.SALESVIBE_APP_URL || window.RAIN_APP_URL || 'https://salesai-2cd3e.web.app';
+        function signIn() { window.location.href = SALESVIBE_APP_URL; }
+        function signUp() { window.location.href = SALESVIBE_APP_URL; }
+
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
